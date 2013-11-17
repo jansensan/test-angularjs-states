@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Test - AngularJS - states</title>
+    <link rel="stylesheet" href="static/css/vendors/normalize.css">
+    <link rel="stylesheet" href="static/css/vendors/main.css">
+    <link rel="stylesheet" href="static/css/app.css">
+    <script type="text/javascript" src="static/js/vendors/modernizr-2.6.2.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Test - AngularJS - states</h1>
+
+    <div ng-app="parentPage">
+        
+      <div class="parent" ng-controller="parentPageController">
+
+        <div>
+          <ul class="child-selection">
+            <li><a href="#" ng-click="setState('child-01')">child 01</a></li>
+            <li><a href="#" ng-click="setState('child-02')">child 02</a></li>
+            <li><a href="#" ng-click="setState('child-03')">child 03</a></li>
+          </ul>
+        </div>
+
+        <div ui-view></div>
+
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="static/js/vendors/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="static/js/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="static/js/vendors/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="static/js/app.js"></script>
+
+  </body>
+</html>
