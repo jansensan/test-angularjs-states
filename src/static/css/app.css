@@ -1,8 +1,12 @@
-.parent .child-selection {
+body,
+html {
+  padding: 16px;
+}
+.template-selection {
   overflow: hidden;
   margin-left: 0;
 }
-.parent .child-selection li {
+.template-selection li {
   float: left;
   margin-right: 24px;
   list-style: none;

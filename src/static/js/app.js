@@ -1,22 +1,20 @@
-angular.module('parentPage', ['ui.router'])
+angular.module('page', ['ui.router'])
 
 .config(function ($stateProvider) {
   $stateProvider
-    .state('child-01', {templateUrl: '/static/templates/child-01.html'})
-    .state('child-02', {templateUrl: '/static/templates/child-02.html'})
-    .state('child-03', {templateUrl: '/static/templates/child-03.html'});
+    .state('parent-01', {templateUrl: 'static/templates/parent-01.html'})
+    .state('parent-02', {templateUrl: 'static/templates/parent-02.html'})
+    .state('parent-03', {templateUrl: 'static/templates/parent-03.html'});
 })
 
-.controller('parentPageController', function ($scope) {
+.controller('pageController', function ($scope, $state) {
 
-  $scope.state = '';
+  var currentState = '';
 
   $scope.setState = function (newState) {
-    console.log('--- setState ---');
-    console.log('newState: ' + (newState));
-
-    if (newState !== $scope.state) {
-      $scope.state = newState;
+    if (newState !== currentState) {
+      currentState = newState;
+      $state.go(currentState);
     }
   };
 });

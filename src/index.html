@@ -10,15 +10,15 @@
   <body>
     <h1>Test - AngularJS - states</h1>
 
-    <div ng-app="parentPage">
+    <div ng-app="page">
         
-      <div class="parent" ng-controller="parentPageController">
+      <div ng-controller="pageController">
 
         <div>
-          <ul class="child-selection">
-            <li><a href="#" ng-click="setState('child-01')">child 01</a></li>
-            <li><a href="#" ng-click="setState('child-02')">child 02</a></li>
-            <li><a href="#" ng-click="setState('child-03')">child 03</a></li>
+          <ul class="template-selection">
+            <li><a href="#" ng-click="setState('parent-01')">parent 01</a></li>
+            <li><a href="#" ng-click="setState('parent-02')">parent 02</a></li>
+            <li><a href="#" ng-click="setState('parent-03')">parent 03</a></li>
           </ul>
         </div>
 
