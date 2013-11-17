@@ -50,19 +50,93 @@ angular.module('page', ['ui.router'])
     templateUrl: 'static/templates/child-06.html'
   };
 
+  // grandchilden
+  var grandchild01 = {
+    name: 'grandchild01',
+    parent: child01,
+    templateUrl: 'static/templates/grandchild-01.html'
+  };
+  var grandchild02 = {
+    name: 'grandchild02',
+    parent: child01,
+    templateUrl: 'static/templates/grandchild-02.html'
+  };
+  var grandchild03 = {
+    name: 'grandchild03',
+    parent: child02,
+    templateUrl: 'static/templates/grandchild-03.html'
+  };
+  var grandchild04 = {
+    name: 'grandchild04',
+    parent: child02,
+    templateUrl: 'static/templates/grandchild-04.html'
+  };
+  var grandchild05 = {
+    name: 'grandchild05',
+    parent: child03,
+    templateUrl: 'static/templates/grandchild-05.html'
+  };
+  var grandchild06 = {
+    name: 'grandchild06',
+    parent: child03,
+    templateUrl: 'static/templates/grandchild-06.html'
+  };
+  var grandchild07 = {
+    name: 'grandchild07',
+    parent: child04,
+    templateUrl: 'static/templates/grandchild-07.html'
+  };
+  var grandchild08 = {
+    name: 'grandchild08',
+    parent: child04,
+    templateUrl: 'static/templates/grandchild-08.html'
+  };
+  var grandchild09 = {
+    name: 'grandchild09',
+    parent: child05,
+    templateUrl: 'static/templates/grandchild-09.html'
+  };
+  var grandchild10 = {
+    name: 'grandchild10',
+    parent: child05,
+    templateUrl: 'static/templates/grandchild-10.html'
+  };
+  var grandchild11 = {
+    name: 'grandchild11',
+    parent: child06,
+    templateUrl: 'static/templates/grandchild-11.html'
+  };
+  var grandchild12 = {
+    name: 'grandchild12',
+    parent: child06,
+    templateUrl: 'static/templates/grandchild-12.html'
+  };
+
   // set state provider
   $stateProvider
     .state(parent01)
       .state(child01)
+        .state(grandchild01)
+        .state(grandchild02)
       .state(child02)
+        .state(grandchild03)
+        .state(grandchild04)
 
     .state(parent02)
       .state(child03)
+        .state(grandchild05)
+        .state(grandchild06)
       .state(child04)
+        .state(grandchild07)
+        .state(grandchild08)
 
     .state(parent03)
       .state(child05)
-      .state(child06);
+        .state(grandchild09)
+        .state(grandchild10)
+      .state(child06)
+        .state(grandchild11)
+        .state(grandchild12);
 })
 
 .controller('pageController', function ($scope, $state) {
