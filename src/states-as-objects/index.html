@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Test - AngularJS - States as Objects</title>
+    <link rel="stylesheet" href="../static/css/vendors/normalize.css">
+    <link rel="stylesheet" href="../static/css/vendors/main.css">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <script type="text/javascript" src="../static/js/vendors/modernizr-2.6.2.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Test - AngularJS - States as Objects</h1>
+
+    <div ng-app="statesAsObjectsPage">
+        
+      <div ng-controller="pageController">
+
+        <div>
+          <ul class="template-selection">
+            <li><a href="#" ng-click="setState('parent01')">parent 01</a></li>
+            <li><a href="#" ng-click="setState('parent02')">parent 02</a></li>
+            <li><a href="#" ng-click="setState('parent03')">parent 03</a></li>
+          </ul>
+        </div>
+
+        <div ui-view></div>
+
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="../static/js/vendors/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="../static/js/vendors/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="ng-app.js"></script>
+
+  </body>
+</html>
