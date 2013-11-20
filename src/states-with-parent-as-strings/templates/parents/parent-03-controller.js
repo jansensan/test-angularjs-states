@@ -2,14 +2,7 @@ angular.module('statesWithParentsAsStringPage')
 
 .config(function ($stateProvider) {
   $stateProvider
-    .state('child05', {
-      parent: 'parent03',
-      templateUrl: '../children/child-05.html'
-    })
-    .state('child06', {
-      parent: 'parent03',
-      templateUrl: '../children/child-06.html'
-    });
+    .state('parent03', {templateUrl: 'templates/parents/parent-03.html'});
 })
 
 .controller('parent03Controller', function ($scope, stateModel) {

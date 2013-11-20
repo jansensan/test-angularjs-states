@@ -8,8 +8,6 @@ angular.module('stateManager', ['ui.router'])
   var Manager = function () {};
   
   Manager.setState = function (newState) {
-    console.log('--- Manager.setState ---');
-    console.log('newState: ' + (newState));
     if (newState !== currentState) {
       currentState = newState;
       $state.go(currentState);
