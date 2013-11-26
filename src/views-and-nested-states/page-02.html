@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Page 02</title>
+    <link rel="stylesheet" href="../static/css/vendors/normalize.css">
+    <link rel="stylesheet" href="../static/css/vendors/main.css">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <script type="text/javascript" src="../static/js/vendors/modernizr-2.6.2.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Page 02</h1>
+
+    <div ng-app="app">
+        
+      <div ng-controller="page02Controller">
+        <div ui-view></div>
+      </div>
+
+      <div ui-view="modal"></div>
+
+    </div>
+
+    <script type="text/javascript" src="../static/js/vendors/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="../static/js/vendors/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="state-manager.js"></script>
+    <script type="text/javascript" src="ng-app.js"></script>
+
+  </body>
+</html>
