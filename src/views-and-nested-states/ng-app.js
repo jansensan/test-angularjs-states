@@ -1,7 +1,6 @@
 angular.module('app', ['stateManager'])
 
 .config(function ($stateProvider) {
-  console.log('--- config ---');
   $stateProvider
     .state('page', {
       abstract: true,
@@ -42,7 +41,6 @@ angular.module('app', ['stateManager'])
 
 
 .factory('pageModel', function (stateManager) {
-  console.log('--- pageModel ---');
   var lastPageState = '';
 
   var Model = function () {};
@@ -66,7 +64,6 @@ angular.module('app', ['stateManager'])
 
 
 .factory('modalModel', function (pageModel, stateManager) {
-  console.log('--- modalModel ---');
   var Model = function () {};
   
   Model.closeModal = function () {
@@ -82,27 +79,23 @@ angular.module('app', ['stateManager'])
 
 
 .controller('navController', function ($scope, pageModel) {
-  console.log('--- navController ---');
   $scope.pageModel = pageModel;
   $scope.pageModel.gotoPage01();
 })
 
 
 .controller('modalController', function ($scope, modalModel) {
-  console.log('--- modalController ---');
   $scope.modalModel = modalModel;
 })
 
 
 .controller('page01Controller', function ($scope, pageModel, modalModel) {
-  console.log('--- page01Controller ---');
   $scope.pageModel = pageModel;
   $scope.modalModel = modalModel;
 })
 
 
 .controller('page02Controller', function ($scope, pageModel, modalModel) {
-  console.log('--- page02Controller ---');
   $scope.pageModel = pageModel;
   $scope.modalModel = modalModel;
 });
