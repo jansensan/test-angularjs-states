@@ -81,23 +81,28 @@ angular.module('app', ['stateManager'])
 })
 
 
-.controller('modalController', function ($scope, pageModel, modalModal) {
-  console.log('--- modalController ---');
+.controller('navController', function ($scope, pageModel) {
+  console.log('--- navController ---');
   $scope.pageModel = pageModel;
-  $scope.modalModal = modalModal;
-})
-
-
-.controller('page01Controller', function ($scope, pageModel, modalModal) {
-  console.log('--- page01Controller ---');
-  $scope.pageModel = pageModel;
-  $scope.modalModal = modalModal;
   $scope.pageModel.gotoPage01();
 })
 
 
-.controller('page02Controller', function ($scope, pageModel, modalModal) {
+.controller('modalController', function ($scope, modalModel) {
+  console.log('--- modalController ---');
+  $scope.modalModel = modalModel;
+})
+
+
+.controller('page01Controller', function ($scope, pageModel, modalModel) {
+  console.log('--- page01Controller ---');
+  $scope.pageModel = pageModel;
+  $scope.modalModel = modalModel;
+})
+
+
+.controller('page02Controller', function ($scope, pageModel, modalModel) {
   console.log('--- page02Controller ---');
   $scope.pageModel = pageModel;
-  $scope.modalModal = modalModal;
+  $scope.modalModel = modalModel;
 });

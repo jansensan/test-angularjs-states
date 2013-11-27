@@ -11,8 +11,15 @@
     <h1>Page 01</h1>
 
     <div ng-app="app">
-        
-      <div ng-controller="page01Controller">
+      
+      <nav ng-controller="navController">
+        <ul>
+          <li><a href="#" ng-click="pageModel.gotoPage01()">Page 01</a></li>
+          <li><a href="#" ng-click="pageModel.gotoPage02()">Page 02</a></li>
+        </ul>
+      </nav>
+
+      <div>
         <div ui-view></div>
       </div>
 
